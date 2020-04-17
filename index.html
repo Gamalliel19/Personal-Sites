@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="le-edge">
+    <title>Gamallilel - Portofolio</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="content-side">
+                <div class="content-side-animation">
+                    <header>
+                        <span class="logo" id="logo">GamaDev</span>
+                        <nav>
+                            <ul>
+                                <li><a href="#" id="aboutLink">About Me!</a></li>
+                                <li><a href="#" id="skillsLink">Skills</a></li>
+                                <li><a href="#" id="contactLink">Projects</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <section class="main" id="main">
+                        <h1 class="main-animation">Hi,</h1>
+                        <h1 class="main-animation">I'm Gamalliel Sharon</h1>
+                        <p class="main-animation">Game Designer & Game developer</p>
+                        <a href="#" class="main-animation">Contact Me</a> 
+                    </section>
+
+                    <section class="about" id="about">
+                        <h1>About</h1>
+                        <p>Saya mahasiswa jurusan Teknik Informatika tahun akhir di Institut Teknologi PLN Jakarta.
+                            Saya lahir di Jakarta pada 19 Januari 1998.
+                        </p>
+                        <a target="blank" href="./fileDiri/CV GAMALLIEL SHARON.pdf" > Download CV
+                        </a>
+                    </section>
+
+                    <section class="skills" id="skills">
+                        <h1>Skills</h1>
+                        <p>Sebagai mahasiswa aktif saya belum mempunyai pengalaman kerja. Akan tetapi
+                            saya mempunyai skill sebagai berikut :
+                        </p>
+                        
+                            <div class="skill">
+                              <div class="skill-name">C#</div>
+                              <div class="skill-bar">
+                                <div class="skill-per" per="50"></div>
+                              </div>
+                            </div>
+                      
+                            <div class="skill">
+                              <div class="skill-name">Java</div>
+                              <div class="skill-bar">
+                                <div class="skill-per" per="70"></div>
+                              </div>
+                            </div>
+                      
+                            <div class="skill">
+                              <div class="skill-name">Unity</div>
+                              <div class="skill-bar">
+                                <div class="skill-per" per="60"></div>
+                              </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-bar">
+                                  <div class="skill-per" per="60"></div>
+                                </div>
+                              </div>
+                        
+                    </section>
+                    <section class="selfie" id="selfie">
+                        <img src="./img/cv.png" alt="">
+                    </section>
+
+                    <section class="contact" id="contact">
+                        <h1>Projects</h1>
+                      
+                            <h3>Coming Soon!</h3>
+                           <!-- <div class="social-buttons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                              </div>-->
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script>
+        $('.skill-per').each(function(){
+          var $this = $(this);
+          var per = $this.attr('per');
+          $this.css("width",per+'%');
+          $({animatedValue: 0}).animate({animatedValue: per},{
+            duration: 1000,
+            step: function(){
+              $this.attr('per', Math.floor(this.animatedValue) + '%');
+            },
+            complete: function(){
+              $this.attr('per', Math.floor(this.animatedValue) + '%');
+            }
+          });
+        });
+      </script>
+</body>
+</html>
